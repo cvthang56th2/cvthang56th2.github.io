@@ -236,7 +236,7 @@ function App() {
                       Web Developer from VietNam
                       <img src={vietnam} alt="vietnam" className='inline ml-1' width={40} />
                     </p>
-                    <ul className='flex mt-2'>
+                    <ul className='flex mt-2 pl-0'>
                       <li className='mr-4'>
                         <a href="https://github.com/cvthang56th2" className='hover:text-green-500' target="_blank">
                           <FontAwesomeIcon icon={faGithub} size="2xl" />
