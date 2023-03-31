@@ -3,7 +3,7 @@ import './App.css'
 import vietnam from './vietnam.png';
 import avatar from './avatar.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCodeBranch, faEnvelope, faChevronRight, faTriangleExclamation, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faCodeBranch, faEnvelope, faChevronRight, faTriangleExclamation, faCheck, faRefresh } from '@fortawesome/free-solid-svg-icons';
 import { faCircleXmark, faBell } from '@fortawesome/free-regular-svg-icons';
 import { faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
@@ -205,7 +205,7 @@ function App() {
       <div className='bg-[#0086d2] flex items-center justify-between px-4 py-1 text-[14px]'>
         <div className='flex items-center'>
           <span><FontAwesomeIcon icon={faCodeBranch} size="sm" /> master</span>
-          <span className='ml-4'><FontAwesomeIcon icon={faCodeBranch} size="sm" /> 0&#8595; 2&#8593;</span>
+          <span className='ml-4'><FontAwesomeIcon icon={faRefresh} size="sm" /> 0&#8595; 2&#8593;</span>
           <span className='ml-3'><FontAwesomeIcon icon={faCircleXmark} size="sm" /> 0 <FontAwesomeIcon icon={faTriangleExclamation} size="sm" /> 0</span>
         </div>
         <div className='flex items-center'>
