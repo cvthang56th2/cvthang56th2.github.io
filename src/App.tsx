@@ -25,7 +25,7 @@ function App() {
     setOpeningFiles(newValues)
     setFileSelected(fileName)
   }
-  const closeFile = (e: Event, fileName: string) => {
+  const closeFile = (e: React.MouseEvent<HTMLElement>, fileName: string) => {
     e.stopPropagation()
     const newValues = JSON.parse(JSON.stringify(openingFiles))
     const index = newValues.indexOf(fileName)
@@ -152,7 +152,19 @@ function App() {
           </div>
         </div>
       </main>
-      <div className='text-center bg-[#323233]'>lorem</div>
+      <div className='bg-[#0086d2] flex items-center justify-between px-4 py-1 text-[14px]'>
+        <div className='flex items-center'>
+          <span>git-master</span>
+          <span className='ml-4'>circle 0 &#8595; 2&#8593;</span>
+          <span className='ml-3'>circle 0 warn 0</span>
+        </div>
+        <div className='flex items-center'>
+          <span className='ml-2'>Prettier</span>
+          <span className='ml-2'>Tweet</span>
+          <span className='ml-2'>Notification</span>
+        </div>
+        
+      </div>
     </div>
   )
 }
