@@ -236,7 +236,7 @@ function App() {
               ))}
             </div>
           </div>
-          <div className='py-5 px-4 flex-1 overflow-y-auto'>
+          <div className='py-5 px-4 md:px-10 flex-1 overflow-y-auto'>
             {isExpandFiles && fileSelected ? (
               <div className='max-w-[1200px] mx-auto h-full'>
                 {dynamicComponent()}
