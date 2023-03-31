@@ -18,7 +18,7 @@ const Overview = () => {
             <ul className='list-disc'>
               <li>
                 <p>Detailed achievements:</p>
-                <ul className='list-disc'>
+                <ul className='list-square'>
                   <li>Collaborated with colleagues from worldwide to implement the Disaster Recovery Project. Completed ahead of the original schedule and saved budget up to 30%.</li>
                   <li>Optimized deployment process and reduced manual work to accelerate product deployment by over 70%.</li>
                   <li>Delivered virtual and live classroom training for employees(the cumulative number of trainees exceeded 500).</li>
@@ -45,7 +45,7 @@ const Overview = () => {
             </span>
             Nha Trang University
           </p>
-          <ul>
+          <ul className="list-disc">
             <li>Information Technology.</li>
           </ul>
         </div>
@@ -56,21 +56,21 @@ const Overview = () => {
         <div>
           <h4 className='text-xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Skills</h4>
           <h6 className='font-bold'>General Tech Stacks</h6>
-          <ul>
+          <ul className="list-disc">
             <li>Architecture Design</li>
             <li>Desktop App Development</li>
             <li>Web Development (Frontend & Backend)</li>
           </ul>
           <h6 className="font-bold">Programming languages</h6>
-          <ul>
+          <ul className="list-disc">
             <li>SQL</li>
             <li>MongoDB</li>
             <li>
               <p>Node.js (Javascript/Typescript)</p>
-              <ul>
+              <ul className="list-square">
                 <li>
                   <p>Vue.js</p>
-                  <ul>
+                  <ul className="list-square">
                     <li>Vue 2, Vue 3, Composition API</li>
                     <li>Vue Router</li>
                     <li>VueX, Piania</li>
@@ -81,7 +81,7 @@ const Overview = () => {
                 </li>
                 <li>
                   <p>React.js</p>
-                  <ul>
+                  <ul className="list-square">
                     <li>React Functions, React Hooks</li>
                     <li>Redux</li>
                     <li>React router</li>
@@ -91,7 +91,7 @@ const Overview = () => {
                 </li>
                 <li>
                   <p>jQuery</p>
-                  <ul>
+                  <ul className="list-square">
                     <li>Slick Slider</li>
                     <li>GSAP</li>
                     <li>...</li>
@@ -105,7 +105,7 @@ const Overview = () => {
             </li>
             <li>
               <p>PHP</p>
-              <ul>
+              <ul className="list-square">
                 <li>Wordpress</li>
                 <li>Laravel</li>
                 <li>Codeigniter</li>
@@ -114,14 +114,14 @@ const Overview = () => {
             </li>
             <li>
               <p>Testing</p>
-              <ul>
+              <ul className="list-square">
                 <li>Unit Test function JS, PHP</li>
                 <li>End to end testing: Cypress</li>
               </ul>
             </li>
             <li>
               <p>Crawling/Tools</p>
-              <ul>
+              <ul className="list-square">
                 <li>Puppeteer</li>
                 <li>Tool use JS</li>
               </ul>
@@ -133,19 +133,19 @@ const Overview = () => {
         </div>
         <div>
           <h4 className='text-xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Certificates</h4>
-          <ul>
+          <ul className="list-disc">
             <li>Vue Certification (2023)</li>
           </ul>
         </div>
         <div>
           <h4 className='text-xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Accomplishments</h4>
-          <ul>
+          <ul className="list-disc">
             <li>...</li>
           </ul>
         </div>
         <div>
           <h4 className='text-xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Languages</h4>
-          <ul>
+          <ul className="list-disc">
             <li>English: (medium)</li>
             <li>Vietnamese: Native</li>
           </ul>

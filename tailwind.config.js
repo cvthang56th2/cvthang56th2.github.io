@@ -4,7 +4,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      listStyleType: {
+        square: 'square',
+        roman: 'upper-roman',
+        slash: '-',
+      }
+    },
   },
   plugins: [],
 }
