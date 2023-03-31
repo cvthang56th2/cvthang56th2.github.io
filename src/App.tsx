@@ -10,8 +10,8 @@ import './App.css'
 import vietnam from './vietnam.png';
 import avatar from './avatar.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCodeBranch, faEnvelope, faChevronRight, faTriangleExclamation, faCheck, faRefresh } from '@fortawesome/free-solid-svg-icons';
-import { faCircleXmark, faBell } from '@fortawesome/free-regular-svg-icons';
+import { faCodeBranch, faEnvelope, faChevronRight, faTriangleExclamation, faCheck, faRefresh, faGear } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faBell, faUserCircle } from '@fortawesome/free-regular-svg-icons';
 import { faGithub, faFacebook, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { Tooltip } from 'react-tooltip'
 
@@ -97,58 +97,75 @@ function App() {
         {fileSelected ? `${fileSelected} - ` : ''} Thang Cao Portfolio - Visual Studio Code
       </header>
       <main className='flex flex-1 overflow-y-auto'>
-        <div className='flex-0 w-[50px] bg-[#333333] text-[#828182]'>
-          <div
-            className={[
-              'w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white',
-              isShowFileToolbar ? 'text-white' : 'text-[#828182]'
-            ].join(' ')}
-            onClick={() => setIsShowFileToolbar(!isShowFileToolbar)}
-          >
-            <svg stroke="currentColor" fill="currentColor" viewBox="0 0 24 24" height="24" width="24" className='mx-auto' xmlns="http://www.w3.org/2000/svg"><path d="M17.5 0h-9L7 1.5V6H2.5L1 7.5v15.07L2.5 24h12.07L16 22.57V18h4.7l1.3-1.43V4.5L17.5 0zm0 2.12l2.38 2.38H17.5V2.12zm-3 20.38h-12v-15H7v9.07L8.5 18h6v4.5zm6-6h-12v-15H16V6h4.5v10.5z"></path></svg>
+        <div className='flex-0 w-[50px] bg-[#333333] text-[#828182] flex flex-col'>
+          <div className='flex-1 overflow-y-auto'>
+            <div
+              className={[
+                'w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white',
+                isShowFileToolbar ? 'text-white' : 'text-[#828182]'
+              ].join(' ')}
+              onClick={() => setIsShowFileToolbar(!isShowFileToolbar)}
+            >
+              <svg stroke="currentColor" fill="currentColor" viewBox="0 0 24 24" height="24" width="24" className='mx-auto' xmlns="http://www.w3.org/2000/svg"><path d="M17.5 0h-9L7 1.5V6H2.5L1 7.5v15.07L2.5 24h12.07L16 22.57V18h4.7l1.3-1.43V4.5L17.5 0zm0 2.12l2.38 2.38H17.5V2.12zm-3 20.38h-12v-15H7v9.07L8.5 18h6v4.5zm6-6h-12v-15H16V6h4.5v10.5z"></path></svg>
+            </div>
+            
+            <a id="project-source" href="https://github.com/cvthang56th2/cvthang56th2.github.io" target="_blank">
+              <div className='w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white'>
+                <FontAwesomeIcon icon={faCodeBranch} size="xl" className='mx-auto block' />
+              </div>
+            </a>
+            <Tooltip
+              anchorId="project-source"
+              place="right"
+              content="Source of this project"
+            />
+            <div className='w-[70%] mx-auto h-[1px] bg-[#828182]'></div>
+            <a id="github-link" href="https://github.com/cvthang56th2" target="_blank">
+              <div className='w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white'>
+                <FontAwesomeIcon icon={faGithub} size="xl" className='mx-auto block' />
+              </div>
+            </a>
+            <Tooltip
+              anchorId="github-link"
+              place="right"
+              content="Find me on Github"
+            />
+            <a id="facebook-link" href="https://www.facebook.com/cvthang56th2" target="_blank">
+              <div className='w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white'>
+                <FontAwesomeIcon icon={faFacebookF} size="xl" className='mx-auto block' />
+              </div>
+            </a>
+            <Tooltip
+              anchorId="facebook-link"
+              place="right"
+              content="Find me on Facebook"
+            />
+            <a id="contact-email" href="mailto:cvthang56th2@gmail.com" target="_blank">
+              <div className='w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white'>
+                <FontAwesomeIcon icon={faEnvelope} size="xl" className='mx-auto block' />
+              </div>
+            </a>
+            <Tooltip
+              anchorId="contact-email"
+              place="right"
+              content="Contact me via Email"
+            />
           </div>
-          
-          <a id="project-source" href="https://github.com/cvthang56th2/cvthang56th2.github.io" target="_blank">
-            <div className='w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white'>
-              <FontAwesomeIcon icon={faCodeBranch} size="xl" className='mx-auto block' />
+          <div className='flex-0'>
+            
+            
+            <div id="setting" className='w-full py-[10px] cursor-pointer flex items-center justify-center hover:text-white'>
+              <FontAwesomeIcon icon={faUserCircle} size="xl" className='mx-auto block' />
             </div>
-          </a>
-          <Tooltip
-            anchorId="project-source"
-            place="right"
-            content="Source of this project"
-          />
-          <div className='w-[70%] mx-auto h-[1px] bg-[#828182]'></div>
-          <a id="github-link" href="https://github.com/cvthang56th2" target="_blank">
-            <div className='w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white'>
-              <FontAwesomeIcon icon={faGithub} size="xl" className='mx-auto block' />
+            <div id="setting" className='w-full py-[10px] cursor-pointer flex items-center justify-center hover:text-white'>
+              <FontAwesomeIcon icon={faGear} size="xl" className='mx-auto block' />
             </div>
-          </a>
-          <Tooltip
-            anchorId="github-link"
-            place="right"
-            content="Find me on Github"
-          />
-          <a id="facebook-link" href="https://www.facebook.com/cvthang56th2" target="_blank">
-            <div className='w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white'>
-              <FontAwesomeIcon icon={faFacebookF} size="xl" className='mx-auto block' />
-            </div>
-          </a>
-          <Tooltip
-            anchorId="facebook-link"
-            place="right"
-            content="Find me on Facebook"
-          />
-          <a id="contact-email" href="mailto:cvthang56th2@gmail.com" target="_blank">
-            <div className='w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white'>
-              <FontAwesomeIcon icon={faEnvelope} size="xl" className='mx-auto block' />
-            </div>
-          </a>
-          <Tooltip
-            anchorId="contact-email"
-            place="right"
-            content="Contact me via Email"
-          />
+            <Tooltip
+              anchorId="project-source"
+              place="right"
+              content="Source of this project"
+            />
+          </div>
         </div>
         {isShowFileToolbar && (
           <div className='flex-0 w-[220px] bg-[#252526] text-[#cccccc] px-[4px] pt-[10px]'>
