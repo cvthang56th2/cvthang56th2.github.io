@@ -108,7 +108,7 @@ function App() {
             <svg stroke="currentColor" fill="currentColor" viewBox="0 0 24 24" height="24" width="24" className='mx-auto' xmlns="http://www.w3.org/2000/svg"><path d="M17.5 0h-9L7 1.5V6H2.5L1 7.5v15.07L2.5 24h12.07L16 22.57V18h4.7l1.3-1.43V4.5L17.5 0zm0 2.12l2.38 2.38H17.5V2.12zm-3 20.38h-12v-15H7v9.07L8.5 18h6v4.5zm6-6h-12v-15H16V6h4.5v10.5z"></path></svg>
           </div>
           
-          <a id="project-source" href="https://github.com/cvthang56th2/thang-cao-portfolio" target="_blank">
+          <a id="project-source" href="https://github.com/cvthang56th2/cvthang56th2.github.io" target="_blank">
             <div className='w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white'>
               <FontAwesomeIcon icon={faCodeBranch} size="xl" className='mx-auto block' />
             </div>
@@ -195,7 +195,7 @@ function App() {
                 <div
                   key={`opening-file-tab-${i}`}
                   className={[
-                    'w-[150px] flex items-center justify-between px-2 py-1 cursor-pointer',
+                    'min-w-[160px] max-w-[200px] flex items-center justify-between px-2 py-1 cursor-pointer',
                     isExpandFiles && fileName === fileSelected ? 'bg-[#1e1e1e]' : 'bg-[#2d2d2d]'
                   ].join(' ')}
                   onClick={() => {
