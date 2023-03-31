@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
-import Overview from './files/Overview'
-import Skills from './files/Skills'
-import Experience from './files/Experience'
-import Education from './files/Education'
-import Projects from './files/Projects'
-import Certificates from './files/Certificates'
-import Accomplishments from './files/Accomplishments'
+import Overview from './files/overview'
+import Skills from './files/skills'
+import Experience from './files/experience'
+import Education from './files/education'
+import Projects from './files/projects'
+import Certificates from './files/certificates'
+import Accomplishments from './files/accomplishments'
 import './App.css'
 import vietnam from './vietnam.png';
 import avatar from './avatar.png';
