@@ -108,7 +108,10 @@ function App() {
                   'w-[150px] flex items-center justify-between px-2 py-1 cursor-pointer',
                   isExpandFiles && fileName === fileSelected ? 'bg-[#1e1e1e]' : 'bg-[#2d2d2d]'
                 ].join(' ')}
-                onClick={() => setFileSelected(fileName)}
+                onClick={() => {
+                  setFileSelected(fileName)
+                  setIsExpandFiles(true)
+                }}
               >
                 <div className='truncate flex items-center'>
                   <span className='text-[10px] text-blue-400 mr-1 font-bold'>M&#8595;</span>
