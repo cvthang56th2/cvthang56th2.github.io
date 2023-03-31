@@ -1,4 +1,11 @@
 import { useEffect, useState } from 'react'
+import Overview from './files/overview'
+import Skills from './files/skills'
+import Experience from './files/experience'
+import Education from './files/education'
+import Projects from './files/projects'
+import Certificates from './files/certificates'
+import Accomplishments from './files/accomplishments'
 import './App.css'
 import vietnam from './vietnam.png';
 import avatar from './avatar.png';
@@ -42,18 +49,38 @@ function App() {
     }
   }
 
-  const checkScreenSize = (isInit: boolean) => {
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 768) {
-      setIsShowFileToolbar(false)
-    } else if (isInit) {
-      setIsShowFileToolbar(true)
+  const dynamicComponent = () => {
+    switch (fileSelected) {
+      case 'overview.md':
+        return <Overview></Overview>
+      case 'skills.md':
+        return <Skills></Skills>
+      case 'experience.md':
+        return <Experience></Experience>
+      case 'education.md':
+        return <Education></Education>
+      case 'projects.md':
+        return <Projects></Projects>
+      case 'certificates.md':
+        return <Certificates></Certificates>
+      case 'accomplishments.md':
+        return <Accomplishments></Accomplishments>
     }
+    return ''
+  }
+
+  const isMobile = () => {
+    const screenWidth = window.innerWidth;
+    return screenWidth < 768
   }
 
   useEffect(() => {
-    checkScreenSize(true)
-    window.addEventListener('resize', () => checkScreenSize(false));
+    setIsShowFileToolbar(!isMobile())
+    window.addEventListener('resize', () => {
+      if (isMobile()) {
+        setIsShowFileToolbar(false)
+      }
+    });
     const scrollContainer = document.querySelector("#wrap-opening-files");
     if (scrollContainer) {
       scrollContainer.addEventListener("wheel", (evt: any) => {
@@ -120,7 +147,12 @@ function App() {
                       'pl-[16px] cursor-pointer items-center flex',
                       fileName === fileSelected ? 'bg-[#37373d]' : 'hover:bg-[#37375d]'
                     ].join(' ')}
-                    onClick={() => openFile(fileName)}
+                    onClick={() => {
+                      openFile(fileName)
+                      if (isMobile()) {
+                        setIsShowFileToolbar(false)
+                      }
+                    }}
                   >
                     <span className='text-[10px] text-blue-400 mr-1 font-bold'>M&#8595;</span>
                     <div className='truncate'>{fileName}</div>
@@ -161,13 +193,13 @@ function App() {
               ))}
             </div>
           </div>
-          <div className='p-5 flex-1 overflow-y-auto'>
+          <div className='py-5 px-4 flex-1 overflow-y-auto'>
             {isExpandFiles && fileSelected ? (
-              <div>
-                Selecting <span className='font-bold'>{fileSelected}</span>
+              <div className='max-w-[1200px] mx-auto'>
+                {dynamicComponent()}
               </div>
             ) : (
-              <div className='h-full flex items-center justify-center'>
+              <div className='h-3/4 flex items-center justify-center'>
                 <div className='flex items-center'>
                   <img src={avatar} alt="thang-cao" className='inline rounded-full border-2 border-white p-1 mr-3 w-[100px] md:w-[150px]' />
                   <div>
