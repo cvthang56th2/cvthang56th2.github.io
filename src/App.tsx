@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Overview from './files/overview'
 import Skills from './files/skills'
+import Hobbies from './files/hobbies'
 import Experience from './files/experience'
 import Education from './files/education'
 import Projects from './files/projects'
@@ -20,6 +21,7 @@ function App() {
   const files = [
     'overview.md',
     'skills.md',
+    'hobbies.md',
     'experience.md',
     'education.md',
     'projects.md',
@@ -53,19 +55,21 @@ function App() {
   const dynamicComponent = () => {
     switch (fileSelected) {
       case 'overview.md':
-        return <Overview></Overview>
+        return <Overview />
       case 'skills.md':
-        return <Skills></Skills>
+        return <Skills />
+      case 'hobbies.md':
+        return <Hobbies />
       case 'experience.md':
-        return <Experience></Experience>
+        return <Experience />
       case 'education.md':
-        return <Education></Education>
+        return <Education />
       case 'projects.md':
-        return <Projects></Projects>
+        return <Projects />
       case 'certificates.md':
-        return <Certificates></Certificates>
+        return <Certificates />
       case 'accomplishments.md':
-        return <Accomplishments></Accomplishments>
+        return <Accomplishments />
     }
     return ''
   }
@@ -152,8 +156,6 @@ function App() {
             />
           </div>
           <div className='flex-0'>
-            
-            
             <div id="setting" className='w-full py-[10px] cursor-pointer flex items-center justify-center hover:text-white'>
               <FontAwesomeIcon icon={faUserCircle} size="xl" className='mx-auto block' />
             </div>
@@ -246,7 +248,7 @@ function App() {
                 <div className='flex items-center'>
                   <img src={avatar} alt="thang-cao" className='inline rounded-full border-2 border-white p-1 mr-3 w-[100px] md:w-[150px]' />
                   <div>
-                    <h1 className='text-4xl'>
+                    <h1 className='text-3xl'>
                       Hello, I'm Thang Cao
                     </h1>
                     <p className='text-lg mt-2'>

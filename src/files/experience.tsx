@@ -5,83 +5,92 @@ const Experience = () => {
     <div className='flex flex-col h-full'>
       <h2 className="flex-0 text-3xl font-bold border-b-[1px] border-[#404040] pb-2 mb-4">👨‍💻 Experience</h2>
       <div className='flex-1 overflow-y-auto'>
-        <h4 className='text-xl font-bold border-b-[1px] border-[#404040] pb-2 mb-4'>Summary</h4>
-        <h4 className='text-xl font-bold border-b-[1px] border-[#404040] pb-2 mb-4'>Experience</h4>
-
         <div>
-          <h1>👨‍💻 Experience</h1>
-          <hr />
+          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Web Developer at 9thWonder VietNam (June 2018 - June 2023)</h4>
           <p>
-            <strong>Software Developer</strong> @
-            <a href="https://www.ey.com/">Ernst &amp; Young</a>
-            <em>(Nov 2018 - Nov 2021)</em>
+            Participate in company projects, discuss, design the project's system, write both BE and FE code, write support tools for test or system, write E2E test or unit test. Also known as a "funny MC" in the company's entertainment activities.
           </p>
-          <p>
-            Completed full lifecycle application development to enterprise business
-            applications including requirement analysis, system design, development,
-            unit testing, implementation, testing support, performance tuning,
-            maintenance, and post-production support.
-          </p>
-          <ul>
+          <ul className='list-disc'>
             <li>
-              Detailed achievements:
-              <ul>
-                <li>
-                  Collaborated with colleagues from worldwide to implement the Disaster
-                  Recovery Project. Completed ahead of the original schedule and saved
-                  budget up to 30%.
-                </li>
-                <li>
-                  Optimized deployment process and reduced manual work to accelerate
-                  product deployment by over 70%.
-                </li>
-                <li>
-                  Delivered virtual and live classroom training for employees(the
-                  cumulative number of trainees exceeded 500).
-                </li>
+              <p>2018-2021: <span className="font-semibold italic">Mazi</span></p>
+              <ul className='list-square'>
+                <li>Landing page: <a href="https://mazi.io/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500">mazi.io</a></li>
+                <li>Developing components.</li>
+                <li>Create APIs for FE to use.</li>
+                <li>Writing Tests: E2E, Unit Test, Component Test.</li>
+                <li>Participate in discussions, offer solutions to solve problems.</li>
+                <li>Technologies used: Node.js, Vue.js (FE), Hapi.js (BE), MongoDB - Mongoose, Cypress</li>
               </ul>
             </li>
             <li>
-              <em><strong>Technologies used:</strong></em> C#, MSSQL, Python, React.js
+              <p>Cuối 2021: <span className="font-semibold italic"><a href="https://www.encompasstech.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500">Encompass</a></span></p>
+              <ul className='list-square'>
+                <li>Build modules, almost completely rebuild</li>
+                <li>Technologies used: React.js, Gatsby.js, Contentful (DB)</li>
+              </ul>
             </li>
-          </ul>
-          <p>&nbsp;</p>
-          <p>
-            <strong>Staff Auditor</strong> @
-            <a href="https://www2.deloitte.com/global/en.html">Deloitte &amp; Touche</a>
-            <em>(July 2017 - Nov 2018)</em>
-          </p>
-          <p>
-            Planned and conducted operational and ﬁnancial audits to conﬁrm ﬁnancial
-            statements are fairly presented in alignment with IFRS.
-          </p>
-          <ul>
             <li>
-              Detailed achievements:
-              <ul>
-                <li>
-                  Delivered internal audit projects for major clients in the
-                  manufacturing industry with a focus on gap assessments/reviews of
-                  business processes and internal control.
-                </li>
-                <li>
-                  Supervised assigned auditing staffs to evaluate performance and
-                  maintain standards.
-                </li>
+              <p>Đầu 2022: <span className="font-semibold italic"><a href="https://resource.hach.com/XOS-Analyzer-Simulator/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500">XOS Simulator</a></span></p>
+              <ul className='list-square'>
+                <li>This project has only me as a programmer</li>
+                <li>Simulate the entire UI of an XOS machine - an X camera</li>
+                <li>Technologies used: Vue.js 3, TailwindCSS</li>
+              </ul>
+            </li>
+            <li>
+              <p>2022: 
+                <span className="font-semibold italic">
+                  <a href="https://www.braincare-dtc.com/" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-purple-500">BrainCare</a>,
+                  <a href="https://exaktime.com/" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-purple-500">ExakTime</a>,
+                  <a href="http://gravinawindows.com/" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-purple-500">Gravina Windows</a>,
+                  <a href="https://syndeoinstitute.org/" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-purple-500">Syndeo Institute</a>
+                </span>
+              </p>
+              <ul className='list-square'>
+                <li>Build modules</li>
+                <li>Create Custom widgets</li>
+                <li>Write code test: E2E</li>
+                <li>Write tools to help testers work faster</li>
+                <li>Technologies used: PHP, Wordpress, Elementor, Cypress, NodeJS, MySQL</li>
+              </ul>
+            </li>
+            <li>
+              <p>2023: <span className="font-semibold italic">Hearsay</span></p>
+              <ul className='list-square'>
+                <li>Participate in phase 2 of the project: this phase allows users to customize colors, text, and some other system functionality</li>
+                <li>Write code test: E2E, Unit Test</li>
+                <li>Technologies used: PHP, Drupal, Cypress, MySQL</li>
               </ul>
             </li>
           </ul>
-          <p>&nbsp;</p>
-          <p>
-            <strong>Audit Intern</strong> @ <a href="https://home.kpmg/">KPMG</a>
-            <em>(July 2015 - July 2015)</em>
-          </p>
-          <p>
-            Performed analytical procedures and analyses to detect unusual ﬁnancial
-            relationships.
-          </p>
+          
+          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Participate in a few Freelancer projects (2019 - 2022)</h4>
+          <p>Mostly doing web app projects</p>
+          <ul className='list-disc'>
+            <li>
+              <p>A few CRM systems, most notably <span className="font-semibold italic">Shopee CRM</span>:</p>
+              <ul className='list-square'>
+                <li>A system to support sellers on Shopee to manage goods, orders, manage customers, automatically message customers...</li>
+                <li>Technologies used: Node.js, Vue.js (FE), Nest.js (BE), MongoDB - Mongoose</li>
+              </ul>
+            </li>
+            <li>
+              <p><span className="font-semibold italic">DAO Management and DAO Chat</span></p>
+              <ul className='list-square'>
+                <li>DAO Management is a system for managing employees in the company DAO Entertainment. There is also management of company assets, files such as audio, video, ... all need to be stored in the cloud and secure.</li>
+                <li>A Chat web app similar to Facebook's Messenger, with features such as single chat, group chat, channel chat,... send text messages, images, sounds,...</li>
+                <li>Technologies used: Node.js, Vue.js (DAO Chat), React.js (DAO Admin), Nest.js (BE), MongoDB - Mongoose, Firebase (Firestore, Storage, FCM, Functions), Google Drive API.</li>
+              </ul>
+            </li>
+            <li>
+              <p><span className="font-semibold italic">Hotato Extension (Chrome):</span></p>
+              <ul className='list-square'>
+                <li>The extension supports Shopee users to view more advanced information of the item such as sale history, sourcing similar products, adding products to their own, ...</li>
+                <li>Technologies used: Node.js, Vue.js, Vite, Shopee API, Nest.js (BE), MongoDB - Mongoose</li>
+              </ul>
+            </li>
+          </ul>
         </div>
-
       </div>
     </div>
   )
