@@ -11,10 +11,22 @@ import './App.css'
 import vietnam from './vietnam.png';
 import avatar from './avatar.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCodeBranch, faEnvelope, faChevronRight, faTriangleExclamation, faCheck, faRefresh, faGear } from '@fortawesome/free-solid-svg-icons';
+import { faCodeBranch, faEnvelope, faChevronRight, faTriangleExclamation, faCheck, faRefresh, faGear, faImage } from '@fortawesome/free-solid-svg-icons';
 import { faCircleXmark, faBell, faUserCircle } from '@fortawesome/free-regular-svg-icons';
 import { faGithub, faFacebook, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { Tooltip } from 'react-tooltip'
+
+type FileIconpProps = {
+  fileName: string;
+};
+
+function FileIcon ({ fileName }: FileIconpProps) {
+  return (
+    <>
+    {fileName.includes('.png') ? (<FontAwesomeIcon icon={faImage} size="sm" className='inline mr-1 mt-1 text-purple-500' />) : (<span className='text-[10px] text-blue-400 mr-1 mt-1 font-bold'>M&#8595;</span>)}
+    </>
+  )
+}
 
 function App() {
   const [openingFiles, setOpeningFiles] = useState<string[]>([])
@@ -27,6 +39,7 @@ function App() {
     'projects.md',
     'certificates.md',
     'accomplishments.md',
+    'avatar.png'
   ]
   const [isShowFileToolbar, setIsShowFileToolbar] = useState(false)
   const [isExpandFiles, setIsExpandFiles] = useState(true)
@@ -70,6 +83,12 @@ function App() {
         return <Certificates />
       case 'accomplishments.md':
         return <Accomplishments />
+      case 'avatar.png':
+        return (
+          <div className='flex items-center justify-center h-full'>
+            <img src={avatar} alt="Thang Cao" />
+          </div>
+        )
     }
     return ''
   }
@@ -199,7 +218,7 @@ function App() {
                       }
                     }}
                   >
-                    <span className='text-[10px] text-blue-400 mr-1 font-bold'>M&#8595;</span>
+                    <FileIcon fileName={fileName} />
                     <div className='truncate'>{fileName}</div>
                   </div>
                 ))}
@@ -228,7 +247,7 @@ function App() {
                   }}
                 >
                   <div className='truncate flex items-center'>
-                    <span className='text-[10px] text-blue-400 mr-1 font-bold'>M&#8595;</span>
+                    <FileIcon fileName={fileName} />
                     <div className='truncate'>
                       {fileName}
                     </div>
