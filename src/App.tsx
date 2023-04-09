@@ -86,7 +86,7 @@ function App() {
       case 'avatar.png':
         return (
           <div className='flex items-center justify-center h-full'>
-            <img src={avatar} alt="Thang Cao" />
+            <img src={avatar} alt="Thang Cao" className='max-w-full max-h-full' />
           </div>
         )
     }
