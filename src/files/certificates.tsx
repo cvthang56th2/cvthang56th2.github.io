@@ -1,4 +1,4 @@
-import React from 'react'
+import vueCertificate from '../vue-certificate.png';
 
 const Certificates = () => {
   return (
@@ -9,6 +9,7 @@ const Certificates = () => {
           <li>Microsoft Ofice Specialist Word (2017)</li>
           <li>Microsoft Ofice Specialist Excel (2018)</li>
           <li>Vue Certification (2023)</li>
+          <img src={vueCertificate} alt="thang-cao-vue-certificate" className='w-full md:w-1/2 mx-auto' />
         </ul>
       </div>
     </div>

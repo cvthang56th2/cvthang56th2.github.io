@@ -11,16 +11,16 @@ const Education = () => {
           </span>
           Luong The Vinh high-school
         </p>
-        <p>
+        <p className='mb-2'>
           <span className='px-2 py-1 rounded-full text-sm bg-[#3a3939] mr-1'>
           2014-2018
           </span>
           Nha Trang University
         </p>
-        <ul className="list-disc">
+        <ul className="list-disc mb-4">
           <li>University degree major: Information Technology.</li>
         </ul>
-        <p>
+        <p className='mb-2'>
           <span className='px-2 py-1 rounded-full text-sm bg-[#3a3939] mr-1'>
           2021-2023
           </span>

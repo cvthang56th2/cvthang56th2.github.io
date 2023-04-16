@@ -10,6 +10,7 @@ import Accomplishments from './files/accomplishments'
 import './App.css'
 import vietnam from './vietnam.png';
 import avatar from './avatar.png';
+import vueCertificate from './vue-certificate.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeBranch, faEnvelope, faChevronRight, faTriangleExclamation, faCheck, faRefresh, faGear, faImage } from '@fortawesome/free-solid-svg-icons';
 import { faCircleXmark, faBell, faUserCircle } from '@fortawesome/free-regular-svg-icons';
@@ -39,7 +40,8 @@ function App() {
     'projects.md',
     'certificates.md',
     'accomplishments.md',
-    'avatar.png'
+    'avatar.png',
+    'vue-certificate.png'
   ]
   const [isShowFileToolbar, setIsShowFileToolbar] = useState(false)
   const [isExpandFiles, setIsExpandFiles] = useState(true)
@@ -65,6 +67,17 @@ function App() {
     }
   }
 
+  const mapImageFileInfo = (fileName: string) => ({
+    'avatar.png': {
+      src: avatar,
+      alt: 'Thang Cao'
+    },
+    'vue-certificate.png': {
+      src: vueCertificate,
+      alt: 'Thang Cao Vue Certification'
+    }
+  }[fileName] || {})
+
   const dynamicComponent = () => {
     switch (fileSelected) {
       case 'overview.md':
@@ -84,9 +97,11 @@ function App() {
       case 'accomplishments.md':
         return <Accomplishments />
       case 'avatar.png':
+      case 'vue-certificate.png':
+        const fileInfo = mapImageFileInfo(fileSelected)
         return (
           <div className='flex items-center justify-center h-full'>
-            <img src={avatar} alt="Thang Cao" className='max-w-full max-h-full' />
+            <img src={fileInfo.src} alt={fileInfo?.alt} className='max-w-full max-h-full' />
           </div>
         )
     }

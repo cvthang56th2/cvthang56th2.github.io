@@ -1,44 +1,46 @@
+import vueCertificate from '../vue-certificate.png';
+
 const Overview = () => {
   return (
     <div className='flex flex-col h-full'>
       <h2 className="flex-0 text-3xl font-bold border-b-[1px] border-[#404040] pb-2">📖 Overview</h2>
-      <div className='flex-1 overflow-y-auto text-lg'>
+      <div className='flex-1 overflow-y-auto overflow-x-hidden text-lg'>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Summary</h4>
-          <p>Mid-Level Software Developer specializing in web application development. Experienced with all stages of the development cycle for dynamic web projects. Well-versed in numerous programming languages including PHP, Node.js (JavaScript/TypeScript). Strong background in software development and built scalable solutions.</p>
+          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>📚 Summary</h4>
+          <p>As a Mid-Level Software Developer with expertise in web application development, I possess extensive experience in all stages of the development cycle for dynamic web projects. My proficiency in multiple programming languages, such as PHP and Node.js (JavaScript/TypeScript), enables me to build scalable solutions that meet diverse project requirements. Additionally, I have a strong background in software development, allowing me to design and implement efficient and effective solutions to complex problems.</p>
         </div>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Experience</h4>
+          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>👨‍💻 Experience</h4>
           <div>
             <h6 className='font-bold'>Web Developer at 9thWonder VietNam (June 2018 - June 2023)</h6>
             <p>
-              Participate in company projects, discuss, design the project's system, write both BE and FE code, write support tools for test or system, write E2E test or unit test. Also known as a "funny MC" in the company's entertainment activities.
+              Participated in company projects, discussing and designing the project's system, writing both backend and frontend code, writing support tools for testing or the system, and writing E2E or unit tests.
             </p>
+            <p>Also known as a "funny MC" in the company's entertainment activities.</p>
             <ul className='list-disc'>
               <li>
                 <p>2018-2021: <span className="font-semibold italic">Mazi</span></p>
                 <ul className='list-square'>
                   <li>Landing page: <a href="https://mazi.io/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500">mazi.io</a></li>
-                  <li>Developing components.</li>
-                  <li>Create APIs for FE to use.</li>
-                  <li>Writing Tests: E2E, Unit Test, Component Test.</li>
-                  <li>Participate in discussions, offer solutions to solve problems.</li>
-                  <li>Technologies used: Node.js, Vue.js (FE), Hapi.js (BE), MongoDB - Mongoose, Cypress</li>
+                  <li>Developed components and created APIs for frontend use.</li>
+                  <li>Wrote tests such as E2E, unit tests, and component tests.</li>
+                  <li>Participated in discussions and offered solutions to solve problems.</li>
+                  <li>Used technologies such as Node.js, Vue.js (frontend), Hapi.js (backend), MongoDB with Mongoose, and Cypress.</li>
                 </ul>
               </li>
               <li>
-                <p>Cuối 2021: <span className="font-semibold italic"><a href="https://www.encompasstech.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500">Encompass</a></span></p>
+                <p>End of 2021: <span className="font-semibold italic"><a href="https://www.encompasstech.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500">Encompass</a></span></p>
                 <ul className='list-square'>
-                  <li>Build modules, almost completely rebuild</li>
-                  <li>Technologies used: React.js, Gatsby.js, Contentful (DB)</li>
+                  <li>Built modules and almost completely rebuilt the project.</li>
+                  <li>Used technologies such as React.js, Gatsby.js, and Contentful as the database.</li>
                 </ul>
               </li>
               <li>
-                <p>Đầu 2022: <span className="font-semibold italic"><a href="https://resource.hach.com/XOS-Analyzer-Simulator/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500">XOS Simulator</a></span></p>
+                <p>Early 2022: <span className="font-semibold italic"><a href="https://resource.hach.com/XOS-Analyzer-Simulator/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-500">XOS Simulator</a></span></p>
                 <ul className='list-square'>
-                  <li>This project has only me as a programmer</li>
-                  <li>Simulate the entire UI of an XOS machine - an X camera</li>
-                  <li>Technologies used: Vue.js 3, TailwindCSS</li>
+                  <li>Worked alone as the only programmer for the project.</li>
+                  <li>Simulated the entire UI of an XOS machine (an X camera).</li>
+                  <li>Used technologies such as Vue.js 3 and TailwindCSS.</li>
                 </ul>
               </li>
               <li>
@@ -51,69 +53,68 @@ const Overview = () => {
                   </span>
                 </p>
                 <ul className='list-square'>
-                  <li>Build modules</li>
-                  <li>Create Custom widgets</li>
-                  <li>Write code test: E2E</li>
-                  <li>Write tools to help testers work faster</li>
-                  <li>Technologies used: PHP, Wordpress, Elementor, Cypress, NodeJS, MySQL</li>
+                  <li>Built modules and created custom widgets.</li>
+                  <li>Wrote code tests such as E2E.</li>
+                  <li>Wrote tools to help testers work faster.</li>
+                  <li>Used technologies such as PHP, WordPress, Elementor, Cypress, Node.js, and MySQL.</li>
                 </ul>
               </li>
               <li>
                 <p>2023: <span className="font-semibold italic">Hearsay</span></p>
                 <ul className='list-square'>
-                  <li>Participate in phase 2 of the project: this phase allows users to customize colors, text, and some other system functionality</li>
-                  <li>Write code test: E2E, Unit Test</li>
-                  <li>Technologies used: PHP, Drupal, Cypress, MySQL</li>
+                  <li>Participated in phase 2 of the project, allowing users to customize colors, text, and some other system functionality.</li>
+                  <li>Wrote code tests such as E2E and unit tests.</li>
+                  <li>Used technologies such as PHP, Drupal, Cypress, and MySQL.</li>
                 </ul>
               </li>
             </ul>
             
-            <h6 className="font-bold mt-2">Participate in a few Freelancer projects (2019 - 2022)</h6>
+            <h6 className="font-bold mt-4">Freelancer projects (2019 - 2022)</h6>
             <p>Mostly doing web app projects</p>
             <ul className='list-disc'>
               <li>
-                <p>A few CRM systems, most notably <span className="font-semibold italic">Shopee CRM</span>:</p>
+                <p>Worked on web app projects such as a few CRM systems, most notably <span className="font-semibold italic">Shopee CRM</span>:</p>
                 <ul className='list-square'>
-                  <li>A system to support sellers on Shopee to manage goods, orders, manage customers, automatically message customers...</li>
-                  <li>Technologies used: Node.js, Vue.js (FE), Nest.js (BE), MongoDB - Mongoose</li>
+                  <li>The Shopee CRM supported sellers on Shopee to manage goods, orders, customers, and automatically message customers.</li>
+                  <li>Used technologies such as Node.js, Vue.js (frontend), Nest.js (backend), and MongoDB with Mongoose</li>
                 </ul>
               </li>
               <li>
-                <p><span className="font-semibold italic">DAO Management and DAO Chat</span></p>
+                <p>Worked on two other projects: <span className="font-semibold italic">DAO Management and DAO Chat</span></p>
                 <ul className='list-square'>
-                  <li>DAO Management is a system for managing employees in the company DAO Entertainment. There is also management of company assets, files such as audio, video, ... all need to be stored in the cloud and secure.</li>
-                  <li>A Chat web app similar to Facebook's Messenger, with features such as single chat, group chat, channel chat,... send text messages, images, sounds,...</li>
-                  <li>Technologies used: Node.js, Vue.js (DAO Chat), React.js (DAO Admin), Nest.js (BE), MongoDB - Mongoose, Firebase (Firestore, Storage, FCM, Functions), Google Drive API.</li>
+                  <li>DAO Management, a system for managing employees in the company DAO Entertainment and assets such as audio and video files stored in the cloud securely.</li>
+                  <li>DAO Chat, a web app similar to Facebook's Messenger with features such as single chat, group chat, channel chat, and the ability to send text messages, images, and sounds.</li>
+                  <li>Used technologies such as Node.js, Vue.js (DAO Chat), React.js (DAO Admin), Nest.js (backend), MongoDB with Mongoose, Firebase (Firestore, Storage, FCM, Functions), and Google Drive API.</li>
                 </ul>
               </li>
               <li>
-                <p><span className="font-semibold italic">Hotato Extension (Chrome):</span></p>
+                <p>Worked on the <span className="font-semibold italic">Hotato Extension (Chrome):</span></p>
                 <ul className='list-square'>
-                  <li>The extension supports Shopee users to view more advanced information of the item such as sale history, sourcing similar products, adding products to their own, ...</li>
-                  <li>Technologies used: Node.js, Vue.js, Vite, Shopee API, Nest.js (BE), MongoDB - Mongoose</li>
+                  <li>Which supported Shopee users to view more advanced information about products such as sale history, sourcing similar products, and adding products to their own</li>
+                  <li>Used technologies such as Node.js, Vue.js, Vite, Shopee API, Nest.js (backend), and MongoDB with Mongoose</li>
                 </ul>
               </li>
             </ul>
           </div>
         </div>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Education</h4>
+          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>👨‍🎓 Education</h4>
           <p className='mb-4'>
             <span className='px-2 py-1 rounded-full text-sm bg-[#3a3939] mr-1'>
             2011-2014
             </span>
             Luong The Vinh high-school
           </p>
-          <p>
+          <p className='mb-2'>
             <span className='px-2 py-1 rounded-full text-sm bg-[#3a3939] mr-1'>
             2014-2018
             </span>
             Nha Trang University
           </p>
-          <ul className="list-disc">
+          <ul className="list-disc mb-4">
             <li>University degree major: Information Technology.</li>
           </ul>
-          <p>
+          <p className='mb-2'>
             <span className='px-2 py-1 rounded-full text-sm bg-[#3a3939] mr-1'>
             2021-2023
             </span>
@@ -124,7 +125,7 @@ const Overview = () => {
           </ul>
         </div>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Skills</h4>
+          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>💻 Skills</h4>
           <h6 className='font-bold'>General Tech Stacks</h6>
           <ul className="list-disc">
             <li>Architecture Design</li>
@@ -216,33 +217,35 @@ const Overview = () => {
           </ul>
         </div>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Hobbies</h4>
+          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>⚽ Hobbies</h4>
           <ul className="list-disc">
-            <li>🎸 Music, 🎨design, art</li>
-            <li>⚽ Sports, especially football</li>
-            <li>👨‍💻 Making thing by code</li>
-            <li>🔧 Like to create tools, auto</li>
+            <li>Music 🎸</li>
+            <li>Creating content 🎨</li>
+            <li>Sports, especially football ⚽</li>
+            <li>Making things by code 👨‍💻</li>
+            <li>Creating tools and automating processes 🔧</li>
           </ul>
         </div>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Certificates</h4>
+          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>🥇 Certificates</h4>
           <ul className="list-disc">
             <li>Microsoft Ofice Specialist Word (2017)</li>
             <li>Microsoft Ofice Specialist Excel (2018)</li>
             <li>Vue Certification (2023)</li>
+            <img src={vueCertificate} alt="thang-cao-vue-certificate" className='w-full md:w-1/2 mx-auto' />
           </ul>
         </div>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Accomplishments</h4>
+          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>🏆 Accomplishments</h4>
           <ul className="list-disc">
-            <li>Second prize in student olympics at Nha Trang University in 4th year of university.</li>
-            <li>Participated in the national student olympics but had no achievements.</li>
+            <li>Won the second prize of the Student Informatics Olympiad of Nha Trang University in 2018 🥈</li>
             <li>Join the ACM-ICPC team, the team solves 3/11 problems 🤣</li>
-            <li>Finisher 15km ultra-trail Cau Dat Farm - Da Lat (2020), Finisher 21km VnExpress Marathon - Nha Trang Marvelous 2022.</li>
+            <li>Finisher 15km ultra-trail Cau Dat Farm - Da Lat (2020) 🏃‍♂️</li>
+            <li>Finisher 21km VnExpress Marathon - Nha Trang Marvelous 2022 🏃‍♂️</li>
           </ul>
         </div>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Languages</h4>
+          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>💡 Languages</h4>
           <ul className="list-disc">
             <li>English: (medium)</li>
             <li>Vietnamese: Native</li>
