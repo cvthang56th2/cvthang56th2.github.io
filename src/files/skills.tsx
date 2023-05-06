@@ -3,15 +3,15 @@ import React from 'react'
 const Skills = () => {
   return (
     <div className='flex flex-col h-full'>
-      <h2 className="flex-0 text-3xl font-bold border-b-[1px] border-[#404040] pb-2 mb-4">💻 Skills</h2>
+      <h2 className="flex-0 text-3xl font-bold border-b-1px border-custom-gray-200 pb-2 mb-4">💻 Skills</h2>
       <div className='flex-1 overflow-y-auto'>
-        <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>General Tech Stacks</h4>
+        <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>General Tech Stacks</h4>
         <ul className="list-disc">
           <li>Architecture Design</li>
           <li>Desktop App Development</li>
           <li>Web Development (Frontend & Backend)</li>
         </ul>
-        <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Programming languages</h4>
+        <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>Programming languages</h4>
         <ul className="list-disc">
           <li>
             <p>Node.js (Javascript/Typescript)</p>
@@ -75,7 +75,7 @@ const Skills = () => {
             </ul>
           </li>
         </ul>
-        <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Databases</h4>
+        <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>Databases</h4>
         <ul className="list-disc">
           <li>MySQL</li>
           <li>MongoDB</li>
@@ -83,14 +83,14 @@ const Skills = () => {
             <p>Firebase - Firestore</p>
           </li>
         </ul>
-        <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Cloud</h4>
+        <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>Cloud</h4>
         <ul className='list-disc'>
           <li>AWS</li>
           <li>Hostinger</li>
           <li>Heroku</li>
           <li>Firebase</li>
         </ul>
-        <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>SCM</h4>
+        <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>SCM</h4>
         <ul className='list-disc'>
           <li>Git</li>
         </ul>

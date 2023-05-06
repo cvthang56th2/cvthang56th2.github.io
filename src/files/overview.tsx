@@ -3,14 +3,14 @@ import vueCertificate from '../vue-certificate.png';
 const Overview = () => {
   return (
     <div className='flex flex-col h-full'>
-      <h2 className="flex-0 text-3xl font-bold border-b-[1px] border-[#404040] pb-2">📖 Overview</h2>
+      <h2 className="flex-0 text-3xl font-bold border-b-1px border-custom-gray-200 pb-2">📖 Overview</h2>
       <div className='flex-1 overflow-y-auto overflow-x-hidden text-lg'>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>📚 Summary</h4>
+          <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>📚 Summary</h4>
           <p>As a Mid-Level Software Developer with expertise in web application development, I possess extensive experience in all stages of the development cycle for dynamic web projects. My proficiency in multiple programming languages, such as PHP and Node.js (JavaScript/TypeScript), enables me to build scalable solutions that meet diverse project requirements. Additionally, I have a strong background in software development, allowing me to design and implement efficient and effective solutions to complex problems.</p>
         </div>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>👨‍💻 Experience</h4>
+          <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>👨‍💻 Experience</h4>
           <div>
             <h6 className='font-bold'>Web Developer at 9thWonder VietNam (June 2018 - Present)</h6>
             <p>
@@ -98,15 +98,15 @@ const Overview = () => {
           </div>
         </div>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>👨‍🎓 Education</h4>
+          <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>👨‍🎓 Education</h4>
           <p className='mb-4'>
-            <span className='px-2 py-1 rounded-full text-sm bg-[#3a3939] mr-1'>
+            <span className='px-2 py-1 rounded-full text-sm bg-custom-gray-100 mr-1'>
             2011-2014
             </span>
             Luong The Vinh high-school
           </p>
           <p className='mb-2'>
-            <span className='px-2 py-1 rounded-full text-sm bg-[#3a3939] mr-1'>
+            <span className='px-2 py-1 rounded-full text-sm bg-custom-gray-100 mr-1'>
             2014-2018
             </span>
             Nha Trang University
@@ -115,7 +115,7 @@ const Overview = () => {
             <li>University degree major: Information Technology.</li>
           </ul>
           <p className='mb-2'>
-            <span className='px-2 py-1 rounded-full text-sm bg-[#3a3939] mr-1'>
+            <span className='px-2 py-1 rounded-full text-sm bg-custom-gray-100 mr-1'>
             2021-2023
             </span>
             Nha Trang University
@@ -125,7 +125,7 @@ const Overview = () => {
           </ul>
         </div>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>💻 Skills</h4>
+          <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>💻 Skills</h4>
           <h6 className='font-bold'>General Tech Stacks</h6>
           <ul className="list-disc">
             <li>Architecture Design</li>
@@ -217,7 +217,7 @@ const Overview = () => {
           </ul>
         </div>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>⚽ Hobbies</h4>
+          <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>⚽ Hobbies</h4>
           <ul className="list-disc">
             <li>Music 🎸</li>
             <li>Creating content 🎨</li>
@@ -227,7 +227,7 @@ const Overview = () => {
           </ul>
         </div>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>🥇 Certificates</h4>
+          <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>🥇 Certificates</h4>
           <ul className="list-disc">
             <li>Microsoft Ofice Specialist Word (2017)</li>
             <li>Microsoft Ofice Specialist Excel (2018)</li>
@@ -236,7 +236,7 @@ const Overview = () => {
           </ul>
         </div>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>🏆 Accomplishments</h4>
+          <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>🏆 Accomplishments</h4>
           <ul className="list-disc">
             <li>Won the second prize of the Student Informatics Olympiad of Nha Trang University in 2018 🥈</li>
             <li>Join the ACM-ICPC team, the team solves 3/11 problems 🤣</li>
@@ -245,7 +245,7 @@ const Overview = () => {
           </ul>
         </div>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>💡 Languages</h4>
+          <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>💡 Languages</h4>
           <ul className="list-disc">
             <li>English: (medium)</li>
             <li>Vietnamese: Native</li>

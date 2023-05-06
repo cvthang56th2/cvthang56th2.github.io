@@ -24,7 +24,7 @@ type FileIconpProps = {
 function FileIcon ({ fileName }: FileIconpProps) {
   return (
     <>
-    {fileName.includes('.png') ? (<FontAwesomeIcon icon={faImage} size="sm" className='inline mr-1 mt-1 text-purple-500' />) : (<span className='text-[10px] text-blue-400 mr-1 mt-1 font-bold'>M&#8595;</span>)}
+    {fileName.includes('.png') ? (<FontAwesomeIcon icon={faImage} size="sm" className='inline mr-1 mt-1 text-purple-500' />) : (<span className='text-10px text-blue-400 mr-1 mt-1 font-bold'>M&#8595;</span>)}
     </>
   )
 }
@@ -131,16 +131,16 @@ function App() {
 
   return (
     <div className="App h-screen w-screen flex flex-col text-white">
-      <header className='flex-0 text-center bg-[#323233] text-[#8e8e8e] p-2'>
+      <header className='flex-0 text-center bg-cool-gray-100 text-cool-gray-200 p-2'>
         {fileSelected ? `${fileSelected} - ` : ''} Thang Cao Portfolio - Visual Studio Code
       </header>
       <main className='flex flex-1 overflow-y-auto'>
-        <div className='flex-0 w-[50px] bg-[#333333] text-[#828182] flex flex-col'>
+        <div className='flex-0 w-50px bg-cool-gray-300 text-cool-gray-400 flex flex-col'>
           <div className='flex-1 overflow-y-auto'>
             <div
               className={[
-                'w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white',
-                isShowFileToolbar ? 'text-white' : 'text-[#828182]'
+                'w-full py-14px cursor-pointer flex items-center justify-center hover:text-white',
+                isShowFileToolbar ? 'text-white' : 'text-cool-gray-400'
               ].join(' ')}
               onClick={() => setIsShowFileToolbar(!isShowFileToolbar)}
             >
@@ -148,7 +148,7 @@ function App() {
             </div>
             
             <a id="project-source" href="https://github.com/cvthang56th2/cvthang56th2.github.io" target="_blank">
-              <div className='w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white'>
+              <div className='w-full py-14px cursor-pointer flex items-center justify-center hover:text-white'>
                 <FontAwesomeIcon icon={faCodeBranch} size="xl" className='mx-auto block' />
               </div>
             </a>
@@ -157,9 +157,9 @@ function App() {
               place="right"
               content="Source of this project"
             />
-            <div className='w-[70%] mx-auto h-[1px] bg-[#828182]'></div>
+            <div className='w-70per mx-auto h-1px bg-cool-gray-400'></div>
             <a id="github-link" href="https://github.com/cvthang56th2" target="_blank">
-              <div className='w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white'>
+              <div className='w-full py-14px cursor-pointer flex items-center justify-center hover:text-white'>
                 <FontAwesomeIcon icon={faGithub} size="xl" className='mx-auto block' />
               </div>
             </a>
@@ -169,7 +169,7 @@ function App() {
               content="Find me on Github"
             />
             <a id="facebook-link" href="https://www.facebook.com/cvthang56th2" target="_blank">
-              <div className='w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white'>
+              <div className='w-full py-14px cursor-pointer flex items-center justify-center hover:text-white'>
                 <FontAwesomeIcon icon={faFacebookF} size="xl" className='mx-auto block' />
               </div>
             </a>
@@ -179,7 +179,7 @@ function App() {
               content="Find me on Facebook"
             />
             <a id="contact-email" href="mailto:cvthang56th2@gmail.com" target="_blank">
-              <div className='w-full py-[14px] cursor-pointer flex items-center justify-center hover:text-white'>
+              <div className='w-full py-14px cursor-pointer flex items-center justify-center hover:text-white'>
                 <FontAwesomeIcon icon={faEnvelope} size="xl" className='mx-auto block' />
               </div>
             </a>
@@ -190,10 +190,10 @@ function App() {
             />
           </div>
           <div className='flex-0'>
-            <div id="setting" className='w-full py-[10px] cursor-pointer flex items-center justify-center hover:text-white'>
+            <div id="setting" className='w-full py-10px cursor-pointer flex items-center justify-center hover:text-white'>
               <FontAwesomeIcon icon={faUserCircle} size="xl" className='mx-auto block' />
             </div>
-            <div id="setting" className='w-full py-[10px] cursor-pointer flex items-center justify-center hover:text-white'>
+            <div id="setting" className='w-full py-10px cursor-pointer flex items-center justify-center hover:text-white'>
               <FontAwesomeIcon icon={faGear} size="xl" className='mx-auto block' />
             </div>
             <Tooltip
@@ -204,12 +204,12 @@ function App() {
           </div>
         </div>
         {isShowFileToolbar && (
-          <div className='flex-0 w-[220px] bg-[#252526] text-[#cccccc] px-[4px] pt-[10px]'>
-            <div className='mb-[4px] pl-[16px] text-[13px] font-semibold'>EXPLORER</div>
-            <div className='cursor-pointer hover:bg-[#37375d] font-bold' onClick={() => setIsExpandFiles(!isExpandFiles)}>
+          <div className='flex-0 w-220px bg-cool-gray-700 text-cool-gray-500 px-4px pt-10px'>
+            <div className='mb-4px pl-16px text-13px font-semibold text-custom-gray-400'>EXPLORER</div>
+            <div className='cursor-pointer hover:bg-cool-gray-600 font-bold' onClick={() => setIsExpandFiles(!isExpandFiles)}>
               <span
                 className={[
-                  'ml-[2px] mr-[6px]',
+                  'ml-2px mr-6px',
                   isExpandFiles ? 'inline-block rotate-90' : ''
                 ].join(' ')}
               >
@@ -223,8 +223,8 @@ function App() {
                   <div
                     key={`file-${i}`}
                     className={[
-                      'pl-[16px] cursor-pointer items-center flex',
-                      fileName === fileSelected ? 'bg-[#37373d]' : 'hover:bg-[#37375d]'
+                      'pl-16px cursor-pointer items-center flex',
+                      fileName === fileSelected ? 'bg-custom-gray-300' : 'hover:bg-cool-gray-600'
                     ].join(' ')}
                     onClick={() => {
                       openFile(fileName)
@@ -241,15 +241,15 @@ function App() {
             )}
           </div>
         )}
-        <div className='flex-1 overflow-y-auto flex flex-col bg-[#1e1e1e]'>
+        <div className='flex-1 overflow-y-auto flex flex-col bg-cool-gray-800'>
           <div className='flex-0 pr-1'>
-            <div id="wrap-opening-files" className='flex w-full overflow-x-auto bg-[#252526]'>
+            <div id="wrap-opening-files" className='flex w-full overflow-x-auto bg-cool-gray-700'>
               {openingFiles.map((fileName, i) => (
                 <div
                   key={`opening-file-tab-${i}`}
                   className={[
-                    'min-w-[160px] max-w-[200px] flex items-center justify-between px-2 py-1 cursor-pointer',
-                    isExpandFiles && fileName === fileSelected ? 'bg-[#1e1e1e]' : 'bg-[#2d2d2d]'
+                    'min-w-160px max-w-200px flex items-center justify-between px-2 py-1 cursor-pointer',
+                    isExpandFiles && fileName === fileSelected ? 'bg-cool-gray-800' : 'bg-cool-gray-900'
                   ].join(' ')}
                   onClick={() => {
                     setFileSelected(fileName)
@@ -267,20 +267,20 @@ function App() {
                       {fileName}
                     </div>
                   </div>
-                  <span className='px-[4px] text-[12px] font-bold rounded-md hover:bg-[#4d4d4d]' onClick={e => closeFile(e, fileName)}>&#10005;</span>
+                  <span className='px-4px text-12px font-bold rounded-md hover:bg-cool-gray-1000' onClick={e => closeFile(e, fileName)}>&#10005;</span>
                 </div>
               ))}
             </div>
           </div>
           <div className='py-5 px-4 md:px-10 flex-1 overflow-y-auto'>
             {isExpandFiles && fileSelected ? (
-              <div className='max-w-[1200px] mx-auto h-full'>
+              <div className='max-w-1200px mx-auto h-full'>
                 {dynamicComponent()}
               </div>
             ) : (
               <div className='h-3/4 flex items-center justify-center'>
                 <div className='flex items-center'>
-                  <img src={avatar} alt="thang-cao" className='inline rounded-full border-2 border-white p-1 mr-3 w-[100px] md:w-[150px]' />
+                  <img src={avatar} alt="thang-cao" className='inline rounded-full border-2 border-white p-1 mr-3 w-100px md:w-150px' />
                   <div>
                     <h1 className='text-3xl'>
                       Hello, I'm Thang Cao
@@ -313,7 +313,7 @@ function App() {
           </div>
         </div>
       </main>
-      <div className='bg-[#0086d2] flex items-center justify-between px-4 py-1 text-[14px]'>
+      <div className='bg-teal-100 flex items-center justify-between px-4 py-1 text-14px'>
         <div className='flex items-center'>
           <span><FontAwesomeIcon icon={faCodeBranch} size="sm" /> master</span>
           <span className='ml-4'><FontAwesomeIcon icon={faRefresh} size="sm" /> 0&#8595; 2&#8593;</span>

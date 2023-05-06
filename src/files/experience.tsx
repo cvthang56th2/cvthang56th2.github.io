@@ -3,10 +3,10 @@ import React from 'react'
 const Experience = () => {
   return (
     <div className='flex flex-col h-full'>
-      <h2 className="flex-0 text-3xl font-bold border-b-[1px] border-[#404040] pb-2 mb-4">👨‍💻 Experience</h2>
+      <h2 className="flex-0 text-3xl font-bold border-b-1px border-custom-gray-200 pb-2 mb-4">👨‍💻 Experience</h2>
       <div className='flex-1 overflow-y-auto'>
         <div>
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Web Developer at 9thWonder VietNam (June 2018 - Present)</h4>
+          <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>Web Developer at 9thWonder VietNam (June 2018 - Present)</h4>
           <p>
             Participated in company projects, discussing and designing the project's system, writing both backend and frontend code, writing support tools for testing or the system, and writing E2E or unit tests.
           </p>
@@ -63,7 +63,7 @@ const Experience = () => {
             </li>
           </ul>
           
-          <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>Freelancer projects (2019 - 2022)</h4>
+          <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>Freelancer projects (2019 - 2022)</h4>
           <p>Mostly doing web app projects</p>
           <ul className='list-disc'>
             <li>
