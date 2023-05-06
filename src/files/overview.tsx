@@ -12,7 +12,7 @@ const Overview = () => {
         <div>
           <h4 className='text-2xl font-bold border-b-[1px] border-[#404040] pb-2 my-4'>👨‍💻 Experience</h4>
           <div>
-            <h6 className='font-bold'>Web Developer at 9thWonder VietNam (June 2018 - June 2023)</h6>
+            <h6 className='font-bold'>Web Developer at 9thWonder VietNam (June 2018 - Present)</h6>
             <p>
               Participated in company projects, discussing and designing the project's system, writing both backend and frontend code, writing support tools for testing or the system, and writing E2E or unit tests.
             </p>
