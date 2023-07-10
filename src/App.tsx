@@ -12,7 +12,7 @@ import vietnam from './vietnam.png';
 import avatar from './avatar.png';
 import vueCertificate from './vue-certificate.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCodeBranch, faEnvelope, faChevronRight, faTriangleExclamation, faCheck, faRefresh, faGear, faImage } from '@fortawesome/free-solid-svg-icons';
+import { faCodeBranch, faEnvelope, faChevronRight, faTriangleExclamation, faCheck, faRefresh, faGear, faImage, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faCircleXmark, faBell, faUserCircle } from '@fortawesome/free-regular-svg-icons';
 import { faGithub, faFacebook, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { Tooltip } from 'react-tooltip'
@@ -24,7 +24,15 @@ type FileIconpProps = {
 function FileIcon ({ fileName }: FileIconpProps) {
   return (
     <>
-    {fileName.includes('.png') ? (<FontAwesomeIcon icon={faImage} size="sm" className='inline mr-1 mt-1 text-purple-500' />) : (<span className='text-10px text-blue-400 mr-1 mt-1 font-bold'>M&#8595;</span>)}
+    {
+      fileName.includes('.pdf') ? 
+      (<FontAwesomeIcon icon={faFilePdf} size="sm" className='inline mr-1 mt-1 text-red-500' />) :
+      (
+        fileName.includes('.png') ? 
+        (<FontAwesomeIcon icon={faImage} size="sm" className='inline mr-1 mt-1 text-purple-500' />) :
+        (<span className='text-10px text-blue-400 mr-1 mt-1 font-bold'>M&#8595;</span>)
+      )
+    }
     </>
   )
 }
@@ -41,12 +49,17 @@ function App() {
     'certificates.md',
     'accomplishments.md',
     'avatar.png',
-    'vue-certificate.png'
+    'vue-certificate.png',
+    'thang-cao-resume.pdf',
   ]
   const [isShowFileToolbar, setIsShowFileToolbar] = useState(false)
   const [isExpandFiles, setIsExpandFiles] = useState(true)
   const [fileSelected, setFileSelected] = useState<string|null>(null)
   const openFile = (fileName: string) => {
+    if (fileName.includes('.pdf')) {
+      window.open(`/${fileName}`, '_blank')
+      return
+    }
     const newValues = JSON.parse(JSON.stringify(openingFiles))
     if (!openingFiles.includes(fileName)) {
       newValues.push(fileName)
