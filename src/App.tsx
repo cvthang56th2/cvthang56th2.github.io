@@ -50,7 +50,7 @@ function App() {
     'accomplishments.md',
     'avatar.png',
     'vue-certificate.png',
-    'thang-cao-resume.pdf',
+    'ThangCao_CV.pdf',
   ]
   const [isShowFileToolbar, setIsShowFileToolbar] = useState(false)
   const [isExpandFiles, setIsExpandFiles] = useState(true)
