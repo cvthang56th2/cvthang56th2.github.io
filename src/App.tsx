@@ -13,7 +13,7 @@ import vueCertificate from './vue-certificate.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeBranch, faEnvelope, faChevronRight, faTriangleExclamation, faCheck, faRefresh, faGear, faImage, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faCircleXmark, faBell, faUserCircle } from '@fortawesome/free-regular-svg-icons';
-import { faGithub, faFacebook, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faFacebook, faFacebookF, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Tooltip } from 'react-tooltip'
 
 type FileIconpProps = {
@@ -187,6 +187,16 @@ function App() {
               place="right"
               content="Find me on Facebook"
             />
+            <a id="linkedin-link" href="https://www.linkedin.com/in/thang-cao96/" target="_blank">
+              <div className='w-full py-14px cursor-pointer flex items-center justify-center hover:text-white'>
+                <FontAwesomeIcon icon={faLinkedin} size="xl" className='mx-auto block' />
+              </div>
+            </a>
+            <Tooltip
+              anchorId="linkedin-link"
+              place="right"
+              content="Find me on LinkedIn"
+            />
             <a id="contact-email" href="mailto:cvthang56th2@gmail.com" target="_blank">
               <div className='w-full py-14px cursor-pointer flex items-center justify-center hover:text-white'>
                 <FontAwesomeIcon icon={faEnvelope} size="xl" className='mx-auto block' />
@@ -295,18 +305,23 @@ function App() {
                       Hello, I'm Thang Cao
                     </h1>
                     <p className='text-lg mt-2'>
-                      Web Developer from VietNam
+                      Full Stack Developer from VietNam
                       <img src={vietnam} alt="vietnam" className='inline ml-1' width={40} />
                     </p>
-                    <ul className='flex mt-2 pl-0'>
-                      <li className='mr-4'>
+                    <ul className='flex mt-2 pl-0 gap-4'>
+                      <li>
                         <a href="https://github.com/cvthang56th2" className='hover:text-green-500' target="_blank">
                           <FontAwesomeIcon icon={faGithub} size="2xl" />
                         </a>
                       </li>
-                      <li className='mr-4'>
+                      <li>
                         <a href="https://www.facebook.com/cvthang56th2" className='hover:text-blue-500' target="_blank">
                           <FontAwesomeIcon icon={faFacebook} size="2xl" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/in/thang-cao96/" className='hover:text-blue-500' target="_blank">
+                          <FontAwesomeIcon icon={faLinkedin} size="2xl" />
                         </a>
                       </li>
                       <li>
