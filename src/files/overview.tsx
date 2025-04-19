@@ -14,17 +14,17 @@ const Overview = () => {
             </div>
           </div>
           <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>Summary</h4>
-          <p>I'm a full stack developer with +6 years of experience in designing, developing, and maintaining web applications (including 2 years of experience in front-end web development in a pixel-perfect manner).</p>
-          <p>I am considered a team-player because I enjoy collaborating with others and thrive in team environments. I can also do some mentoring tasks and conduct code reviews for team members. I'm always willing to learn new technologies.</p>
-          <p>Experienced in Waterfall and Agile (Scrum / Kanban) methodologies. Can communicate in English.</p>
-          <h4 className='text-xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>Specialties:</h4>
-          <ul className="list-disc">
-            <li>Proficient in both front-end and back-end technologies.</li>
-            <li>Strong understanding of the entire web development process.</li>
-            <li>Quick learning, researching and applying new knowledge.</li>
-            <li>Good at teamwork and communication, encourage and motivate team members for improving team spirit well.</li>
-            <li>Have ability to work as T-shaped person in Scrum Team.</li>
-          </ul>
+          <p>
+            Full Stack Developer with over 7 years of experience architecting, developing, and maintaining scalable
+            and high-performance web applications. Proficient in modern web technologies including React.js, Vue.js, Node.js, and AWS services. Adept at both front-end and back-end development with a strong eye
+            for pixel-perfect UI and clean, maintainable code. Skilled in Agile/Scrum methodologies and experienced
+            in leading teams, mentoring junior developers, and conducting code reviews.
+          </p>
+          <p>
+            Passionate about clean architecture, SOLID principles, performance optimization, and automation
+            testing. Proven track record of delivering results, whether as a team player or independent contributor. Actively contributes to open-source and freelance projects and is currently exploring AI and SaaS
+            product development.
+          </p>
           <h4 className='text-xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>Video</h4>
           <p><a href="https://www.facebook.com/watch/?v=570726515042209" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Watch me at 9thWonder VietNam</a></p>
         </div>
