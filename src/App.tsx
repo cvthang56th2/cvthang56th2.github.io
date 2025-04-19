@@ -6,7 +6,6 @@ import Experience from './files/experience'
 import Education from './files/education'
 import Projects from './files/projects'
 import Certificates from './files/certificates'
-import Accomplishments from './files/accomplishments'
 import './App.css'
 import vietnam from './vietnam.png';
 import avatar from './avatar.png';
@@ -47,7 +46,6 @@ function App() {
     'education.md',
     'projects.md',
     'certificates.md',
-    'accomplishments.md',
     'avatar.png',
     'vue-certificate.png',
     'ThangCao_CV.pdf',
@@ -107,8 +105,6 @@ function App() {
         return <Projects />
       case 'certificates.md':
         return <Certificates />
-      case 'accomplishments.md':
-        return <Accomplishments />
       case 'avatar.png':
       case 'vue-certificate.png':
         const fileInfo = mapImageFileInfo(fileSelected)

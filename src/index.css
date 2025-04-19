@@ -20,3 +20,7 @@
 ul {
   padding-left: 40px;
 }
+
+p, li {
+  line-height: 1.7;
+}
