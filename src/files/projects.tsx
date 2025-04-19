@@ -104,7 +104,7 @@ const Projects = () => {
         <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>TTEK Inc.</h4>
         <ul className='list-disc'>
           <li>
-            <p>2023-2024: <span className="font-semibold italic">RiskLab</span></p>
+            <p>2023-2024: <a href="https://www.ttekglobal.com/risklaboverview" target="_blank" rel="noopener noreferrer" className="font-semibold italic text-blue-600 hover:underline">RiskLab</a></p>
             <ul className='list-square'>
               <li>Developed reuse-able front-end components and designed several UI/UX pages.</li>
               <li>Actively participated in discussions, providing solutions to address challenges.</li>
@@ -127,7 +127,7 @@ const Projects = () => {
             </ul>
           </li>
           <li>
-            <p>2024-2025: <span className="font-semibold italic">Spice - Smart Rirekisho</span></p>
+            <p>2024-2025: <a href="https://resume.zcareer.com/" target="_blank" rel="noopener noreferrer" className="font-semibold italic text-blue-600 hover:underline">Spice - Smart Resume</a></p>
             <ul className='list-square'>
               <li>Led the team, coordinated tasks, conducted code reviews, and ensured the team met project milestones and deadlines.</li>
               <li>Built reusable front-end components and implemented responsive UI/UX pages.</li>
