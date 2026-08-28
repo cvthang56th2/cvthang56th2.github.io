@@ -1,30 +1,33 @@
-import React from 'react'
+import ContentLayout from '../components/ContentLayout'
+
+const degrees = [
+  {
+    year: '2023',
+    school: 'Nha Trang University, Vietnam',
+    degree: 'Master of Science in Information Technology',
+  },
+  {
+    year: '2018',
+    school: 'Nha Trang University, Vietnam',
+    degree: 'Bachelor of Science in Information Technology',
+  },
+]
 
 const Education = () => {
   return (
-    <div className='flex flex-col h-full'>
-      <h2 className="flex-0 text-3xl font-bold border-b-1px border-custom-gray-200 pb-2 mb-4">👨‍🎓 Education</h2>
-      <div className='flex-1 overflow-y-auto'>
-        <p className='mb-2'>
-          <span className='px-2 py-1 rounded-full text-sm bg-custom-gray-100 mr-1'>
-          2023
-          </span>
-          Nha Trang University, Vietnam
-        </p>
-        <ul className="list-disc mb-4">
-          <li>Master of Science in Information Technology</li>
-        </ul>
-        <p className='mb-2'>
-          <span className='px-2 py-1 rounded-full text-sm bg-custom-gray-100 mr-1'>
-          2018
-          </span>
-          Nha Trang University, Vietnam
-        </p>
-        <ul className="list-disc">
-          <li>Bachelor of Science in Information Technology</li>
-        </ul>
+    <ContentLayout fileName="education.md" title="Education" titleColor="text-vscode-keyword">
+      <div className="space-y-6">
+        {degrees.map(({ year, school, degree }) => (
+          <div key={year + degree} className="timeline-item">
+            <span className="inline-block font-mono text-xs px-2.5 py-1 rounded-full bg-cool-gray-900 border border-custom-gray-200/40 text-vscode-type mb-2">
+              {year}
+            </span>
+            <h4 className="content-subheading">{school}</h4>
+            <p className="text-cool-gray-500 mt-1 text-base md:text-lg">{degree}</p>
+          </div>
+        ))}
       </div>
-    </div>
+    </ContentLayout>
   )
 }
 

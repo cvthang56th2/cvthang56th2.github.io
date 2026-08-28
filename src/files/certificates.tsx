@@ -1,31 +1,50 @@
-import vueCertificate from '../vue-certificate.png';
-import awsSAACertificate from '../aws-saa.png';
+import ContentLayout from '../components/ContentLayout'
+import vueCertificate from '../vue-certificate.png'
+import awsSAACertificate from '../aws-SAA-C03-certificate.png'
+
+const certs = [
+  {
+    name: 'AWS Certified Solutions Architect – Associate',
+    year: '2025',
+    url: 'https://www.credly.com/badges/9597eb9e-fe0a-48fb-9a31-b063130a0328/linked_in?t=svyryr',
+    image: awsSAACertificate,
+    alt: 'AWS Certified Solutions Architect Associate',
+  },
+  {
+    name: 'Certified Vue Developer, VueAcademy',
+    year: '2023',
+    url: 'https://badgr.com/public/assertions/jcKxBDueQuurY5VktOIhvg',
+    image: vueCertificate,
+    alt: 'Vue Developer Certificate',
+  },
+]
 
 const Certificates = () => {
   return (
-    <div className='flex flex-col h-full'>
-      <h2 className="flex-0 text-3xl font-bold border-b-1px border-custom-gray-200 pb-2 mb-4">🥇 Certifications</h2>
-      <div className='flex-1 overflow-y-auto'>
-        <ul className="list-disc">
-          <li>
-            <a className="text-blue-500 hover:text-purple-500" href="https://www.credly.com/badges/9597eb9e-fe0a-48fb-9a31-b063130a0328/linked_in?t=svyryr" target="_blank" rel="noopener noreferrer">
-              AWS Certified Solutions Architect - Associate (2025)
-            </a>
-          </li>
-          <a className="text-blue-500 hover:text-purple-500 block my-4" href="https://www.credly.com/badges/9597eb9e-fe0a-48fb-9a31-b063130a0328/linked_in?t=svyryr" target="_blank" rel="noopener noreferrer">
-            <img src={awsSAACertificate} alt="Thang Cao AWS Certified Solutions Architect Associate" className='w-full md:w-1/4 mx-auto' />
+    <ContentLayout fileName="certificates.md" title="Certifications" titleColor="text-vscode-orange">
+      <div className="grid gap-8 md:grid-cols-2">
+        {certs.map(({ name, year, url, image, alt }) => (
+          <a
+            key={name}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block p-4 sm:p-5 lg:p-6 rounded-lg border border-custom-gray-200/30 bg-cool-gray-900/40
+                       hover:border-vscode-orange/40 transition-all duration-300"
+          >
+            <div className="flex items-start justify-between gap-2 mb-4 lg:mb-5">
+              <p className="font-medium text-base md:text-lg text-white group-hover:text-vscode-orange transition-colors">{name}</p>
+              <span className="shrink-0 font-mono text-xs sm:text-sm px-2 py-1 rounded bg-cool-gray-800 text-vscode-comment">{year}</span>
+            </div>
+            <img
+              src={image}
+              alt={alt}
+              className="w-full rounded-md border border-custom-gray-200/20 group-hover:border-vscode-orange/20 transition-colors"
+            />
           </a>
-          <li>
-            <a className="text-blue-500 hover:text-purple-500" href="https://badgr.com/public/assertions/jcKxBDueQuurY5VktOIhvg" target="_blank" rel="noopener noreferrer">
-              Certified Vue Developer, VueAcademy (2023)
-            </a>
-          </li>
-          <a className="text-blue-500 hover:text-purple-500 block my-4" href="https://badgr.com/public/assertions/jcKxBDueQuurY5VktOIhvg" target="_blank" rel="noopener noreferrer">
-            <img src={vueCertificate} alt="Thang Cao Vue Developer Certificate" className='w-full md:w-1/2 mx-auto' />
-          </a>
-        </ul>
+        ))}
       </div>
-    </div>
+    </ContentLayout>
   )
 }
 

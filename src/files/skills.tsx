@@ -1,26 +1,29 @@
-import React from 'react'
+import ContentLayout from '../components/ContentLayout'
+
+const skillGroups = [
+  { label: 'Frontend', skills: ['TypeScript', 'React', 'Next.js', 'Vue.js', 'Tailwind CSS', 'Vuetify'] },
+  { label: 'Backend', skills: ['Node.js', 'NestJS', 'Go', 'PHP', 'REST APIs', 'Socket.io', 'WordPress'] },
+  { label: 'Data & Search', skills: ['PostgreSQL', 'MongoDB', 'Typesense'] },
+  { label: 'Cloud & DevOps', skills: ['Docker', 'CI/CD', 'AWS', 'DigitalOcean', 'Supabase'] },
+  { label: 'Engineering', skills: ['System Design', 'API Design', 'Performance Optimization', 'Automated Testing', 'Code Review', 'AI/LLM Integration'] },
+]
 
 const Skills = () => {
   return (
-    <div className='flex flex-col h-full'>
-      <h2 className="flex-0 text-3xl font-bold border-b-1px border-custom-gray-200 pb-2 mb-4">💻 Core Skills</h2>
-      <div className='flex-1 overflow-y-auto'>
-        <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>Frontend</h4>
-        <p>TypeScript, React, Next.js, Vue.js, Tailwind CSS, Vuetify</p>
-
-        <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>Backend</h4>
-        <p>Node.js, NestJS, Go, PHP, REST APIs, Socket.io, WordPress, WordPress Plugin Development</p>
-
-        <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>Data & Search</h4>
-        <p>PostgreSQL, MongoDB, Typesense</p>
-
-        <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>Cloud & DevOps</h4>
-        <p>Docker, CI/CD, AWS, DigitalOcean, Supabase</p>
-
-        <h4 className='text-2xl font-bold border-b-1px border-custom-gray-200 pb-2 my-4'>Engineering</h4>
-        <p>System Design, API Design, Performance Optimization, Automated Testing, Code Review, AI/LLM Integration</p>
+    <ContentLayout fileName="skills.md" title="Core Skills" titleColor="text-vscode-type">
+      <div className="space-y-8 lg:space-y-10">
+        {skillGroups.map(({ label, skills }) => (
+          <div key={label}>
+            <p className="section-heading">{label}</p>
+            <div className="flex flex-wrap mt-3">
+              {skills.map(skill => (
+                <span key={skill} className="skill-tag">{skill}</span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
+    </ContentLayout>
   )
 }
 
