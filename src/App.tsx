@@ -10,6 +10,7 @@ import './App.css'
 import vietnam from './vietnam.png';
 import avatar from './avatar.png';
 import vueCertificate from './vue-certificate.png';
+import awsSAACertificate from './aws-SAA-C03-certificate.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeBranch, faEnvelope, faChevronRight, faTriangleExclamation, faCheck, faRefresh, faGear, faImage, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faCircleXmark, faBell, faUserCircle } from '@fortawesome/free-regular-svg-icons';
@@ -48,6 +49,7 @@ function App() {
     'certificates.md',
     'avatar.png',
     'vue-certificate.png',
+    'aws-SAA-C03-certificate.png',
     'ThangCao_CV.pdf',
   ]
   const [isShowFileToolbar, setIsShowFileToolbar] = useState(false)
@@ -86,6 +88,10 @@ function App() {
     'vue-certificate.png': {
       src: vueCertificate,
       alt: 'Thang Cao Vue Certification'
+    },
+    'aws-SAA-C03-certificate.png': {
+      src: awsSAACertificate,
+      alt: 'Thang Cao AWS Certified Solutions Architect Associate'
     }
   }[fileName] || {})
 
@@ -107,6 +113,7 @@ function App() {
         return <Certificates />
       case 'avatar.png':
       case 'vue-certificate.png':
+      case 'aws-SAA-C03-certificate.png':
         const fileInfo = mapImageFileInfo(fileSelected)
         return (
           <div className='flex items-center justify-center h-full'>
@@ -305,9 +312,10 @@ function App() {
                       Hello, I'm Thang Cao
                     </h1>
                     <p className='text-lg mt-2'>
-                      Full Stack Developer from VietNam
+                      Full Stack Developer
                       <img src={vietnam} alt="vietnam" className='inline ml-1' width={40} />
                     </p>
+                    <p className='text-sm mt-1 text-cool-gray-400'>8 years building scalable web products</p>
                     <ul className='flex mt-2 pl-0 gap-4'>
                       <li>
                         <a href="https://github.com/cvthang56th2" className='hover:text-green-500' target="_blank">
