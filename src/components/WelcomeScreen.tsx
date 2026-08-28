@@ -115,6 +115,8 @@ const WelcomeScreen = ({ onOpenFile }: WelcomeScreenProps) => {
           <span className="text-vscode-keyword">tip</span>: explore files in the sidebar, or start with{' '}
           <button onClick={() => onOpenFile('overview.md')} className="text-vscode-accent hover:underline">overview.md</button>
           {' · '}
+          <span className="text-vscode-keyword">↑↓</span> open file · <span className="text-vscode-keyword">←→</span> switch tab
+          {' · '}
           <span className="text-vscode-keyword">Ctrl+W</span> close tab · <span className="text-vscode-keyword">Ctrl+Shift+W</span> close all
           <span className="hidden md:inline text-vscode-comment/70"> (⌘W is reserved by the browser)</span>
         </p>

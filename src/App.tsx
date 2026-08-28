@@ -35,38 +35,42 @@ function FileIcon({ fileName }: FileIconProps) {
 
 const WELCOME_FILE = 'welcome.md'
 
+const FILES = [
+  WELCOME_FILE,
+  'overview.md',
+  'skills.md',
+  'experience.md',
+  'projects.md',
+  'education.md',
+  'certificates.md',
+  'hobbies.md',
+  'avatar.png',
+  'vue-certificate.png',
+  'aws-SAA-C03-certificate.png',
+  'ThangCao_CV.pdf',
+]
+
+const tabsInExplorerOrder = (tabs: string[]) =>
+  [...tabs].sort((a, b) => FILES.indexOf(a) - FILES.indexOf(b))
+
 function App() {
   const [openingFiles, setOpeningFiles] = useState<string[]>([WELCOME_FILE])
-  const files = [
-    WELCOME_FILE,
-    'overview.md',
-    'skills.md',
-    'hobbies.md',
-    'experience.md',
-    'education.md',
-    'projects.md',
-    'certificates.md',
-    'avatar.png',
-    'vue-certificate.png',
-    'aws-SAA-C03-certificate.png',
-    'ThangCao_CV.pdf',
-  ]
   const [isShowFileToolbar, setIsShowFileToolbar] = useState(false)
   const [isExpandFiles, setIsExpandFiles] = useState(true)
   const [fileSelected, setFileSelected] = useState<string | null>(WELCOME_FILE)
 
-  const openFile = (fileName: string) => {
+  const openFile = useCallback((fileName: string, options?: { viaKeyboard?: boolean }) => {
     if (fileName.includes('.pdf')) {
-      window.open(`/${fileName}`, '_blank')
+      if (options?.viaKeyboard) {
+        setFileSelected(fileName)
+      } else {
+        window.open(`/${fileName}`, '_blank')
+      }
       return
     }
-    const newValues = [...openingFiles]
-    if (!openingFiles.includes(fileName)) {
-      newValues.push(fileName)
-    }
-    setOpeningFiles(newValues)
+    setOpeningFiles(prev => (prev.includes(fileName) ? prev : [...prev, fileName]))
     setFileSelected(fileName)
-  }
+  }, [])
 
   const closeTabByName = useCallback((fileName: string) => {
     setOpeningFiles(prev => {
@@ -122,6 +126,12 @@ function App() {
 
   const fileSelectedRef = useRef(fileSelected)
   fileSelectedRef.current = fileSelected
+
+  const openingFilesRef = useRef(openingFiles)
+  openingFilesRef.current = openingFiles
+
+  const openFileRef = useRef(openFile)
+  openFileRef.current = openFile
 
   useEffect(() => {
     setIsShowFileToolbar(!isMobile())
@@ -214,17 +224,56 @@ function App() {
       if (chordPending && key !== 'control' && key !== 'meta' && key !== 'alt') {
         clearChord()
       }
+
+      // ↑↓ — navigate explorer and open file
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault()
+        e.stopImmediatePropagation()
+        const current = fileSelectedRef.current ?? WELCOME_FILE
+        let idx = FILES.indexOf(current)
+        if (idx === -1) idx = 0
+        const nextIdx = e.key === 'ArrowDown'
+          ? Math.min(idx + 1, FILES.length - 1)
+          : Math.max(idx - 1, 0)
+        if (nextIdx !== idx) {
+          setIsExpandFiles(true)
+          fileSelectedRef.current = FILES[nextIdx]
+          openFileRef.current(FILES[nextIdx], { viaKeyboard: true })
+        }
+        return
+      }
+
+      // ←→ — switch between open tabs (explorer order)
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+        const tabs = tabsInExplorerOrder(openingFilesRef.current)
+        const current = fileSelectedRef.current
+        if (!current || tabs.length <= 1) return
+        const idx = tabs.indexOf(current)
+        if (idx === -1) return
+        const nextIdx = e.key === 'ArrowRight'
+          ? Math.min(idx + 1, tabs.length - 1)
+          : Math.max(idx - 1, 0)
+        if (nextIdx !== idx) {
+          e.preventDefault()
+          e.stopImmediatePropagation()
+          fileSelectedRef.current = tabs[nextIdx]
+          setFileSelected(tabs[nextIdx])
+        }
+        return
+      }
     }
 
-    // Capture phase runs before the browser handles the shortcut
     window.addEventListener('keydown', onKeyDown, true)
-    document.addEventListener('keydown', onKeyDown, true)
     return () => {
       window.removeEventListener('keydown', onKeyDown, true)
-      document.removeEventListener('keydown', onKeyDown, true)
       clearChord()
     }
   }, [closeTabByName, closeAllTabs])
+
+  useEffect(() => {
+    if (!fileSelected) return
+    document.querySelector(`[data-file="${CSS.escape(fileSelected)}"]`)?.scrollIntoView({ block: 'nearest' })
+  }, [fileSelected])
 
   const isHomeView = fileSelected === null || fileSelected === WELCOME_FILE
 
@@ -308,9 +357,10 @@ function App() {
             </div>
             {isExpandFiles && (
               <div className="mt-1">
-                {files.map((fileName, i) => (
+                {FILES.map((fileName, i) => (
                   <div
                     key={`file-${i}`}
+                    data-file={fileName}
                     className={[
                       'pl-16px py-0.5 cursor-pointer items-center flex text-sm transition-colors',
                       fileName === fileSelected ? 'bg-custom-gray-300 text-white' : 'hover:bg-cool-gray-600',
